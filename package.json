@@ -1,0 +1,19 @@
+{
+  "name": "com.we2app.firebase",
+  "version": "1.0.0",
+  "displayName": "firebase",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "phonegap-plugin-push": {
+        "FCM_VERSION": "11.6.2"
+      }
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~7.0.0",
+    "phonegap-plugin-push": "^2.1.3"
+  }
+}

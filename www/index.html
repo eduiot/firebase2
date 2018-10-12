@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+ <title>Push Demo</title>
+   <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript">
+         document.addEventListener("deviceready",onDeviceReady,false);
+                function onDeviceReady() {
+                     var push = PushNotification.init({ "android": {"senderID": "691975050448"}});
+                     push.on('registration', function(data) {
+                     alert(data.registrationId);
+                     });
+          
+                     push.on('notification', function(data) {
+                     alert(data.title+" Message: " +data.message);
+                     });
+          
+                     push.on('error', function(e) {
+                     alert(e);
+                     });
+                }
+             
+      </script>
+</head>
+<body>
+<h1> Firebase </h1>
+</body>
+</html>
